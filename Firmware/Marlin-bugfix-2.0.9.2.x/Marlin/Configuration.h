@@ -589,7 +589,7 @@
 
 #if ENABLED(PIDTEMP)
   //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
-  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
+  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
@@ -600,9 +600,30 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp 65.82
-    #define DEFAULT_Ki 12.47
-    #define DEFAULT_Kd 86.88
+    //#define DEFAULT_Kp 65.82
+    //#define DEFAULT_Ki 12.47
+    //#define DEFAULT_Kd 86.88
+    
+    //#define DEFAULT_Kp 82.83
+    //#define DEFAULT_Ki 15.69
+    //#define DEFAULT_Kd 109.33
+
+    //#define DEFAULT_Kp 46.88
+    //#define DEFAULT_Ki 9.16
+    //#define DEFAULT_Kd 60.01
+
+    //#define DEFAULT_Kp 56.73
+    //#define DEFAULT_Ki 10.58
+    //#define DEFAULT_Kd 76.02
+
+    //#define DEFAULT_Kp 44.50
+    //#define DEFAULT_Ki 7.42
+    //#define DEFAULT_Kd 66.76
+
+    #define DEFAULT_Kp 67.23
+    #define DEFAULT_Ki 12.93
+    #define DEFAULT_Kd 87.40
+
   #endif
 #endif // PIDTEMP
 
@@ -623,7 +644,7 @@
  * heater. If your configuration is significantly different than this and you don't understand
  * the issues involved, don't use bed PID until someone else verifies that your hardware works.
  */
-#define PIDTEMPBED
+//#define PIDTEMPBED
 
 //#define BED_LIMIT_SWITCHING
 
@@ -1830,7 +1851,7 @@
  *   M501 - Read settings from EEPROM. (i.e., Throw away unsaved changes)
  *   M502 - Revert settings to "factory" defaults. (Follow with M500 to init the EEPROM.)
  */
-#define EEPROM_SETTINGS     // Persistent storage with M500 and M501
+//#define EEPROM_SETTINGS     // Persistent storage with M500 and M501
 //#define DISABLE_M503        // Saves ~2700 bytes of PROGMEM. Disable for release!
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save PROGMEM.
 #define EEPROM_BOOT_SILENT    // Keep M503 quiet and only give errors during first load
